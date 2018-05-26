@@ -1,0 +1,9 @@
+# Example configuration
+port: 8888
+debug: false
+encKey: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" # 32-64 character string
+remote: http://example.com
+expHours: 1
+getTokenRoute: "/getToken"
+requestTokenData:
+  authorization: "internal"
