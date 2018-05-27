@@ -9,12 +9,21 @@
 			"Rev": "06ea1031745cb8b3dab3f6a236daf2b0aa468b7e"
 		},
 		{
+			"ImportPath": "github.com/dgrijalva/jwt-go/request",
+			"Comment": "v3.2.0",
+			"Rev": "06ea1031745cb8b3dab3f6a236daf2b0aa468b7e"
+		},
+		{
 			"ImportPath": "github.com/gin-contrib/sse",
 			"Rev": "22d885f9ecc78bf4ee5d72b937e4bbcdc58e8cae"
 		},
 		{
 			"ImportPath": "github.com/gin-contrib/zap",
 			"Rev": "26d5a72cacce2c0f12082a494ca2132c3ed40949"
+		},
+		{
+			"ImportPath": "github.com/gin-gonic/contrib/jwt",
+			"Rev": "33543d11593dd66df698cae8b4c776faa0827359"
 		},
 		{
 			"ImportPath": "github.com/gin-gonic/gin",

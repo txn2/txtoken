@@ -1,9 +1,10 @@
 # Example configuration
 port: 8888
-debug: false
+debug: true
 encKey: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" # 32-64 character string
 remote: http://example.com
 expHours: 1
 getTokenRoute: "/getToken"
+checkTokenRoute: "/checkToken"
 requestTokenData:
   authorization: "internal"

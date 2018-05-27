@@ -12,6 +12,7 @@ import (
 	"encoding/json"
 
 	jwt_lib "github.com/dgrijalva/jwt-go"
+	"github.com/dgrijalva/jwt-go/request"
 	"github.com/gin-contrib/zap"
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
@@ -27,6 +28,7 @@ type config struct {
 	Remote           string                 `yaml:"remote"`
 	ExpHours         int64                  `yaml:"expHours"`
 	GetTokenRoute    string                 `yaml:"getTokenRoute"`
+	CheckTokenRoute  string                 `yaml:"checkTokenRoute"`
 	RequestTokenData map[string]interface{} `yaml:"requestTokenData"`
 }
 
@@ -76,7 +78,26 @@ func main() {
 	// Route get token request
 	r.POST(cfg.GetTokenRoute, tokenRouteHandler)
 
+	// Route check token request
+	r.GET(cfg.CheckTokenRoute, checkTokenRouteHandler)
+
 	r.Run(":" + cfg.Port)
+}
+
+func checkTokenRouteHandler(c *gin.Context) {
+	cfg := c.MustGet("Cfg").(config)
+
+	decoded, err := request.ParseFromRequest(c.Request, request.OAuth2Extractor, func(token *jwt_lib.Token) (interface{}, error) {
+		b := []byte(cfg.EncKey)
+		return b, nil
+	})
+
+	if err != nil {
+		c.JSON(401, gin.H{"error": err.Error()})
+		return
+	}
+
+	c.JSON(200, decoded)
 }
 
 // RouteHandler handles the http route for inbound data
