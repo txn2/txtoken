@@ -1,7 +1,7 @@
 # Build customization
 build:
-  main: ./txauth.go
-  binary: txauth
+  main: ./txtoken.go
+  binary: txtoken
 
   ldflags: -a -installsuffix cgo
 
@@ -46,8 +46,8 @@ dockers:
     goos: linux
     goarch: amd64
     goarm: ''
-    binary: txauth
-    image: txn2/txauth
+    binary: txtoken
+    image: txn2/txtoken
     dockerfile: dockerfiles/amd64/Dockerfile
     tag_templates:
     - latest
@@ -56,14 +56,14 @@ dockers:
     goos: linux
     goarch: arm
     goarm: 6
-    binary: txauth
-    image: txn2/txauth
+    binary: txtoken
+    image: txn2/txtoken
     dockerfile: dockerfiles/arm32v6/Dockerfile
     tag_templates:
     - "arm32v6-{{ .Version }}"
 
 brew:
-  name: txauth
+  name: txtoken
 
   github:
     owner: txn2
@@ -75,6 +75,6 @@ brew:
 
   folder: Formula
 
-  homepage: https://github.com/txn2/txauth
+  homepage: https://github.com/txn2/txtoken
 
   description: "JWT token authentication proxy."
