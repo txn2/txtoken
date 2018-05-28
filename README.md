@@ -18,5 +18,10 @@
 
 Systems that share an encryption key with txToken can validate the token and ensure the authenticity of it's data.
 
+## Getting Started
 
+Checkout the article [JWT Microservice, Tokenize Remote APIs] for a detailed functional overview and guide.
+
+
+[JWT Microservice, Tokenize Remote APIs]: https://mk.imti.co/jwt-microservice/
 [txtoken]: https://github.com/txn2/txtoken
