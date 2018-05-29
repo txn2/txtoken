@@ -1,5 +1,5 @@
 ![txtoken data transmission](mast.jpg)
-[![irsync Release](https://img.shields.io/github/release/txn2/txtoken.svg)](https://github.com/txn2/txtoken/releases)
+[![txtoken Release](https://img.shields.io/github/release/txn2/txtoken.svg)](https://github.com/txn2/txtoken/releases)
 [![Go Report Card](https://goreportcard.com/badge/github.com/txn2/txtoken)](https://goreportcard.com/report/github.com/txn2/txtoken)
 [![Docker Container Image Size](https://shields.beevelop.com/docker/image/image-size/txn2/txtoken/latest.svg)](https://hub.docker.com/r/txn2/irsync/)
 [![Docker Container Layers](https://shields.beevelop.com/docker/image/layers/txn2/txtoken/latest.svg)](https://hub.docker.com/r/txn2/irsync/)
